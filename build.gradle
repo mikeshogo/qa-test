@@ -86,6 +86,10 @@ bootRun {
     systemProperty springProfilesActive, System.getProperty(springProfilesActive)
 }
 
+bootWar {
+    archiveName 'ROOT.war'
+}
+
 tasks.withType(GroovyCompile) {
     configure(groovyOptions) {
         forkOptions.jvmArgs = ['-Xmx1024m']
@@ -109,3 +113,5 @@ assets {
     minifyJs = true
     minifyCss = true
 }
+
+
